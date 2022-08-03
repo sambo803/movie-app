@@ -1,7 +1,56 @@
+###
+#get movies index
 GET http://localhost:3000/movies.json
-
 ###
-GET http://localhost:3000/actors.json
-
-###
+# post movies create
 POST http://localhost:3000/movies.json
+Content-Type: application/json
+
+{
+  "title": "Batula 4",
+  "length": "4 hours",
+  "year": 2022
+}
+###
+# get movies show
+GET http://localhost:3000/movies/2.json
+###
+PATCH http://localhost:3000/movies/6.json
+Content-Type: application/json
+
+{
+  "title": "Batula III",
+  "length": "3 hours",
+  "year": 2016
+}
+###
+# movies delete
+DELETE http://localhost:3000/movies.json
+
+
+
+
+###
+# get actors index
+GET http://localhost:3000/actors.json
+###
+# post actors create
+POST http://localhost:3000/actors.json
+Content-Type: application/json
+
+{
+  "name": "Camie Rhodes",
+  "age": 29
+}
+###
+# get actors show
+GET http://localhost:3000/actors/3.json
+###
+# patch actors update
+PATCH http://localhost:3000/actors/4.json
+Content-Type: application/json
+
+{
+  "name": "Willie the Mavis McGee",
+  "age": 64
+}
