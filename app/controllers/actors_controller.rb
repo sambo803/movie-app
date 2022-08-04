@@ -22,4 +22,10 @@ class ActorsController < ApplicationController
     actor.save
     render json: actor.as_json
   end
+
+  def destroy
+    actor = Actor.find_by(id: params[:id])
+    actor.destroy
+    render json: { message: "Actor record destroyed" }
+  end
 end
